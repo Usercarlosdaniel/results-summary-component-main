@@ -1,0 +1,194 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    font-family: "HankenGrotesk", sans-serif;
+    list-style: none;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--White);
+}
+
+.container{
+    width: 38.375rem;
+    height: 26.625rem;
+    display: flex;
+    background: var(--White);
+    box-shadow: 10px 10px 10px var(--Pale-blue);
+    border-radius: 1.75rem;
+}
+.container h2{
+    font-size: 1.375rem;
+}
+.container .side{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+.container .side:first-child{
+    border-radius: 1.75rem;
+    background: linear-gradient(to bottom, var(--Light-slate-blue), var(--Light-royal-blue));
+    color: var(--White);
+    padding: 2rem 0 0 0;
+}
+.container .circle{
+    width: 10.375rem;
+    height: 10.375rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 100%;
+    background: linear-gradient(to bottom, var(--Violet-blue), var(--Persian-blue));
+    margin: 1.89rem auto;
+}
+.container .circle span{
+    font-size: 3.125rem;
+    font-weight: 800;
+}
+.container .circle p{
+    font-size: 0.938rem;
+    opacity: .7;
+    font-weight: 500;
+}
+.container .side:first-child p:last-of-type{
+    margin: 0.625rem 0 0 0;
+    padding: 0 2.8rem;
+    opacity: .7;
+}
+
+.container .side:last-child{
+    padding: 0 1.875rem;
+}
+.container .side:last-child h1{
+ font-size: 1.7rem;
+ margin: 2rem 0 1.2rem 0;
+}
+.container .side:last-child ul{
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+    width: 100%;
+}
+.container .side:last-child ul li{
+    width: 100%;
+    height: 3.125rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0.5rem;
+}
+.container .side:last-child ul li:nth-child(1){
+    background: var(--Light-red);
+}
+.container .side:last-child ul li:nth-child(2){
+    background: var(--Orangey-yellow);
+}
+.container .side:last-child ul li:nth-child(3){
+    background: var(--Green-teal);
+}
+.container .side:last-child ul li:nth-child(4){
+    background: var(--Cobalt-blue);
+}
+
+.container .side:last-child ul li div{
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+}
+.container .side:last-child ul li:nth-child(1) div span{
+    color: hsl(0, 100%, 67%);
+}
+.container .side:last-child ul li:nth-child(2) div span{
+    color: hsl(39, 100%, 56%);
+}
+.container .side:last-child ul li:nth-child(3) div span{
+    color: hsl(166, 100%, 37%);
+}
+.container .side:last-child ul li:nth-child(4) div span{
+    color: hsl(234, 85%, 45%);
+}
+
+.container .side:last-child .btn{
+    border: none;
+    margin: 2rem 0;
+    padding: 1rem 2rem;
+    width: 100%;
+    border-radius: 100vw;
+    color: var(--White);
+    cursor: pointer;
+    background: var(--Dark-gray-blue);
+}
+.container .side:last-child .btn:hover{
+    background: linear-gradient(to bottom, var(--Light-slate-blue), var(--Light-royal-blue));
+}
+
+@media screen and (max-width: 600px) {
+body{
+    align-items: flex-start;
+}
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .container .side{
+        width: 100%;
+        border-radius: 0;
+    }
+    .container .side:first-child{
+        border-radius: 0 0 1.75rem 1.75rem;
+    }
+    .container .side:last-child{
+        padding: 0;
+    }
+    .container .side:last-child ul{
+        width: 90vw;
+    }
+    .container .side:last-child ul li{
+        width: 90vw;
+    }
+
+    .container .side:last-child .btn{
+        width: 90vw;
+    }
+
+    .container .side:first-child p:last-of-type{
+        margin: 0.625rem 0 2rem 0;
+    }
+}
+
+:root{
+    --Light-red: hsl(0, 100%, 67%, 0.2);
+    --Orangey-yellow: hsl(39, 100%, 56%, 0.2);
+    --Green-teal: hsl(166, 100%, 37%, 0.2);
+    --Cobalt-blue: hsl(234, 85%, 45%, 0.2);
+    
+    --Light-slate-blue: hsl(252, 100%, 67%);
+    --Light-royal-blue: hsl(241, 81%, 54%);
+    
+    --Violet-blue: hsla(256, 72%, 46%, 1);
+    --Persian-blue: hsla(241, 72%, 46%, 0);
+    
+    --White: hsl(0, 0%, 100%);
+    --Pale-blue: hsl(221, 100%, 96%);
+    --Light-lavender: hsl(241, 100%, 89%);
+    --Dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+@font-face {
+    font-family: "HankenGrotesk";
+    src: url(../fonts/HankenGrotesk-VariableFont_wght.ttf) format("truetype");
+}
